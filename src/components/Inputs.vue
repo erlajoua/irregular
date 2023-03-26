@@ -1,13 +1,24 @@
 <script setup lang="ts">
 	import CustomInput from './CustomInput.vue';
 	import Words from './Words.vue';
-	import { ref, computed } from 'vue';
+	import { ref } from 'vue';
+	import verbs_fr from '../assets/verbs_fr.json'
 
 	interface Input {
 		selected: boolean,
 		disabled: boolean,
 		value: string | undefined
 	}
+
+	interface Combinaison {
+	[base: string]: {
+		translate: string;
+		past_simple: string;
+		past_participle: string;
+	}
+}
+
+	let currentVerb = ref<string>('');
 
 	const inputs = ref<Input[]>(Array.from({ length: 4 }, () => ({
 		selected: false,
@@ -33,6 +44,15 @@
 		inputs.value[0].disabled = true;
 		setValues();
 		setSelected();
+		currentVerb.value = simulateEvent();
+	}
+
+	const simulateEvent = () => {
+		const verbs = Object.keys(verbs_fr);
+		let verb = verbs[Math.floor(Math.random() * verbs.length)]
+		while (verb === currentVerb.value)
+			verb = verbs[Math.floor(Math.random() * verbs.length)]
+		return verb;
 	}
 
 	init();
@@ -46,6 +66,7 @@
 	/>
 	<Words
 		mode="base"
-		verb="be"
+		:verb="currentVerb"
 	/>
+	<button @click="simulateEvent">simulate event</button>
 </template>
