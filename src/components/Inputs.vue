@@ -55,9 +55,9 @@
 	const getMode = () => {
 		const index = inputs.value.findIndex(input => input.disabled === false);
 
-		if (index === 0)
+		if (index === 1)
 			mode.value = 'base';
-		else if (index === 1)
+		else if (index === 0)
 			mode.value = 'translate';
 		else if (index === 2)
 			mode.value = 'past_simple';
