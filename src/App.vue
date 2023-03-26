@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1 class="bg-red-500">{{ $t('shared.inputs.base') }}</h1>
+  <router-view />
 </template>
 
 <style scoped>
