@@ -7,7 +7,12 @@
 	]);
 
 	const test = (index: number) => {
-		inputs.value[index] = !inputs.value[index];
+		const locks = inputs.value.filter(input => input === true);
+		if ((locks.length > 1 && inputs.value[index] === true)
+			|| (locks.length < 3 && inputs.value[index] === false))
+			inputs.value[index] = !inputs.value[index];
+		else
+			alert("T'es dumb!");
 	}
 </script>
 

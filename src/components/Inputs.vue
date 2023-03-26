@@ -22,9 +22,16 @@
 		})
 	}
 
+	const setSelected = () => {
+		let input = inputs.value.find(input => input.disabled === false);
+		if (input)
+			input.selected = true;
+	}
+
 	const init = () => {
 		inputs.value[0].disabled = true;
 		setValues();
+		setSelected();
 	}
 
 	init();
