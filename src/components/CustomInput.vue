@@ -20,7 +20,7 @@ const props = defineProps({
 	},
 	value: {
 		type: String,
-		default: ''
+		default: 'Test'
 	}
 })
 
@@ -29,7 +29,8 @@ const isSelected = ref(props.isSelected);
 
 <template>
 	<input type="text" class="w-[200px] h-[40px] rounded-lg border-solid border-purple-600 outline-none p-2 text-center"
-		:class="isSelected && !isDisabled ? 'border-2' : 'border-0'"
-		@click="isSelected = (!isDisabled ? !isSelected : isSelected)" :disabled="isDisabled"
+	:class="[  isSelected && !isDisabled ? 'border-2' : 'border-0',  isDisabled ? 'opacity-50' : '']"
+		@click="isSelected = (!isDisabled ? !isSelected : isSelected)"
+		disabled
 		:value="value ? value : 'Test'" />
 </template>
