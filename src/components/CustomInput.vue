@@ -34,6 +34,6 @@ const selected = ref(props.selected);
 		:class="[  selected && !disabled ? 'border-2' : 'border-0',  disabled ? 'opacity-50' : '']"
 		@click="$emit('click')"
 	>
-		<span v-if="value">{{ value }}</span>
+		<span v-if="value && disabled">{{ value }}</span>
 	</div>
 </template>

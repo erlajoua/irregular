@@ -45,5 +45,4 @@ watch(() => props.verb, () => {
 			<span>{{ word }}</span>
 		</div>
 	</div>
-	<button @click="getWords(props.mode, props.verb)">refresh</button>
 </template>

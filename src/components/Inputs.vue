@@ -31,12 +31,10 @@
 	const setValues = () => {
 		const combinaison = getVerbCombinaison(currentVerb.value);
 		inputs.value.forEach((input, index) => {
-			if (input.disabled) {
-				if (index === 0)
-					input.value = currentVerb.value;
-				else
-					input.value = combinaison[Object.keys(combinaison)[index - 1] as keyof SubCombinaison];
-			}
+			if (index === 0)
+				input.value = currentVerb.value;
+			else
+				input.value = combinaison[Object.keys(combinaison)[index - 1] as keyof SubCombinaison];
 		})
 		let tmp;
 		tmp = inputs.value[0].value;
@@ -71,8 +69,10 @@
 		inputs.value[0].disabled = true;
 		setDisabled();
 		setSelected();
+		getMode();
 		currentVerb.value = getNewVerb();
 		setValues();
+		console.log("inputs = ", inputs.value);
 	}
 
 	const getNewVerb = () => {
@@ -90,7 +90,12 @@
 	}
 
 	const choice = (word: string) => {
-		const mode = getMode();
+		//mode
+		console.log("word = ", word);
+		if (getVerbCombinaison(currentVerb.value)[mode.value as keyof SubCombinaison] === word) {
+			console.log("true");
+		}
+		
 	}
 
 	init();
