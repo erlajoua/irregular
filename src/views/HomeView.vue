@@ -1,22 +1,12 @@
 <script setup lang="ts">
-  import CustomInput from '../components/CustomInput.vue'
+  import Inputs from '@/components/Inputs.vue';
 </script>
 
 <template>
-  <div class="w-screen h-screen bg-blue-500">
+  <div class="w-screen h-screen bg-blue-500 gap-2">
     <h1 class="bg-red-500">{{ $t('shared.inputs.base') }}</h1>
     <div class="flex items-center justify-center flex-col">
-      <span>Disabled</span>
-      <CustomInput
-        :isDisabled="true"
-      />
-      <span>Selected</span>
-      <CustomInput
-        :isSelected="true"
-      />
-      <span>Waiting</span>
-      <CustomInput
-      />
+      <Inputs />
     </div>
 
   </div>
