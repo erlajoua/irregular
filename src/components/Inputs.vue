@@ -3,7 +3,6 @@
 	import Words from './Words.vue';
 	import { ref } from 'vue';
 	import verbs_fr from '../assets/verbs_fr.json'
-import { objectToString } from '@vue/shared';
 
 	interface Input {
 		selected: boolean,
@@ -63,6 +62,18 @@ import { objectToString } from '@vue/shared';
 		return (verbs_fr as Combinaison)[verb];
 	}
 
+	const getMode = () => {
+		const index = inputs.value.findIndex(input => input.disabled === false);
+
+		if (index === 0)
+			return 'base';
+		if (index === 1)
+			return 'translate';
+		if (index === 2)
+			return 'past_simple';			
+		return 'past_participle'
+	}
+
 	const init = () => {
 		inputs.value[0].disabled = true;
 		setDisabled();
@@ -95,7 +106,7 @@ import { objectToString } from '@vue/shared';
 		:value="value"
 	/>
 	<Words
-		mode="base"
+		:mode="getMode()"
 		:verb="currentVerb"
 	/>
 	<button @click="simulateEvent">simulate event win condition</button>

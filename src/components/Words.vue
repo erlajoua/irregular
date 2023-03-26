@@ -46,6 +46,7 @@ watch(() => props.verb, () => {
 <template>
 	<div class="flex flex flex-wrap gap-2 w-2/5">
 		<span>Verb = {{ props.verb }}</span>
+		<span>Mode = {{ props.mode }}</span>
 		<div v-for="(word, index) in words" :key="index" class="bg-white p-2 cursor-pointer hover:opacity-50">
 			<span>{{ word }}</span>
 		</div>

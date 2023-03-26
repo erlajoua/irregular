@@ -22,8 +22,7 @@ const props = defineProps({
 		default: false
 	},
 	value: {
-		type: String,
-		default: 'Test'
+		type: String
 	}
 })
 
@@ -35,6 +34,6 @@ const selected = ref(props.selected);
 		:class="[  selected && !disabled ? 'border-2' : 'border-0',  disabled ? 'opacity-50' : '']"
 		@click="$emit('click')"
 	>
-		<span>{{ value ? value : 'Test' }}</span>
+		<span v-if="value">{{ value }}</span>
 	</div>
 </template>
