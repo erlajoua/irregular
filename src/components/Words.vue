@@ -3,7 +3,7 @@ import { ref, watch } from 'vue';
 import verbs_fr from '../assets/verbs_fr.json';
 import type { Combinaison, mode } from '../shared/interfaces'
 
-const COUNT = 20;
+const COUNT = 3;
 
 const props = defineProps<{ mode: mode, verb: string }>();
 const words = ref<string[]>([]);
@@ -29,7 +29,7 @@ const getWords = ((mode: mode, verb: string) => {
 		words.value = randomVerbs.map(verb => (verbs_fr as Combinaison)[verb][mode]);
 })
 
-watch(() => props.verb, () => {
+watch(() => [props.verb, props.mode], () => {
 	getWords(props.mode, props.verb)
 }, { immediate: true })
 

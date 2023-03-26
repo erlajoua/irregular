@@ -1,10 +1,8 @@
 <script setup lang="ts">
 
-import { ref} from "vue";
-
 defineEmits(['click']);
 
-const props = defineProps({
+defineProps({
 	width: {
 		type: String,
 		default: '200'
@@ -14,19 +12,15 @@ const props = defineProps({
 		default: '80'
 	},
 	selected: {
-		type: Boolean,
-		default: false
+		type: Boolean
 	},
 	disabled: {
-		type: Boolean,
-		default: false
+		type: Boolean
 	},
 	value: {
 		type: String
 	}
 })
-
-const selected = ref(props.selected);
 </script>
 
 <template>
@@ -34,6 +28,6 @@ const selected = ref(props.selected);
 		:class="[  selected && !disabled ? 'border-2' : 'border-0',  disabled ? 'opacity-50' : '']"
 		@click="$emit('click')"
 	>
-		<span v-if="value && disabled">{{ value }}</span>
+		<span v-if="value !== ''">{{ value }}</span>
 	</div>
 </template>

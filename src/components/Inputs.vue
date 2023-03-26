@@ -40,10 +40,15 @@
 		tmp = inputs.value[0].value;
 		inputs.value[0].value = inputs.value[1].value;
 		inputs.value[1].value = tmp;
+
+		inputs.value.forEach(input => {
+			if (!input.disabled)
+				input.value = '';
+		})
 	}
 
 	const setSelected = () => {
-		let input = inputs.value.find(input => input.disabled === false);
+		let input = inputs.value.find(input => input.disabled === false && input.value === '');
 		if (input)
 			input.selected = true;
 	}
@@ -53,7 +58,7 @@
 	}
 
 	const getMode = () => {
-		const index = inputs.value.findIndex(input => input.disabled === false);
+		const index = inputs.value.findIndex(input => input.selected === true);
 
 		if (index === 1)
 			mode.value = 'base';
@@ -66,13 +71,11 @@
 	}
 
 	const init = () => {
-		inputs.value[0].disabled = true;
 		setDisabled();
-		setSelected();
-		getMode();
 		currentVerb.value = getNewVerb();
 		setValues();
-		console.log("inputs = ", inputs.value);
+		setSelected();
+		getMode();
 	}
 
 	const getNewVerb = () => {
@@ -83,34 +86,36 @@
 		return verb;
 	}
 
-	const simulateEvent = () => {
-		currentVerb.value = getNewVerb();
-		setSelected();
-		setValues();
-	}
-
 	const choice = (word: string) => {
-		//mode
-		console.log("word = ", word);
-		if (getVerbCombinaison(currentVerb.value)[mode.value as keyof SubCombinaison] === word) {
-			console.log("true");
+		if ((mode.value === 'base' && currentVerb.value === word) || getVerbCombinaison(currentVerb.value)[mode.value as keyof SubCombinaison] === word) {
+			let input = inputs.value.find(input => input.selected === true);
+			if (input) {
+				input.selected = false;
+				input.value = word;
+				setSelected();
+				getMode();
+			}
 		}
-		
+		if (inputs.value.every(input => input.value !== '')) {
+			currentVerb.value = getNewVerb();
+			setValues();
+			setSelected();
+			getMode();
+		}
 	}
 
 	init();
 </script>
 
 <template>
-	<CustomInput v-for="({selected, disabled, value}, index) in inputs" :key="index"
-		:selected="selected"
-		:disabled="disabled"
-		:value="value"
+	<CustomInput v-for="(input, index) in inputs" :key="index"
+		:selected="input.selected"
+		:disabled="input.disabled"
+		:value="input.value"
 	/>
 	<Words
 		:mode="mode"
 		:verb="currentVerb"
 		@choice="choice($event)"
 	/>
-	<button @click="simulateEvent">simulate event win condition</button>
 </template>
