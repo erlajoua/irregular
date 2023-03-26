@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="w-[100vw] h-[100vh] bg-blue-500">
+  <div class="w-screen h-screen bg-blue-500">
     <h1 class="bg-red-500">{{ $t('shared.inputs.base') }}</h1>
     <div class="flex items-center justify-center flex-col">
       <span>Disabled</span>
