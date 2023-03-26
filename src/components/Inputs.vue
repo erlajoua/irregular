@@ -3,6 +3,7 @@
 	import Words from './Words.vue';
 	import { ref } from 'vue';
 	import verbs_fr from '../assets/verbs_fr.json'
+	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
 	interface Input {
 		selected: boolean,
@@ -10,19 +11,10 @@
 		value: string | undefined
 	}
 
-	interface Combinaison {
-		[base: string]: SubCombinaison
-	}
-
-	interface SubCombinaison {
-		translate: string;
-		past_simple: string;
-		past_participle: string;
-	}
-
 	const props = defineProps<{inputs: boolean[]}>()
 
 	let currentVerb = ref<string>('');
+	let mode = ref<mode>('base');
 
 	const inputs = ref<Input[]>(Array.from({ length: 4 }, () => ({
 		selected: false,
@@ -66,12 +58,13 @@
 		const index = inputs.value.findIndex(input => input.disabled === false);
 
 		if (index === 0)
-			return 'base';
-		if (index === 1)
-			return 'translate';
-		if (index === 2)
-			return 'past_simple';			
-		return 'past_participle'
+			mode.value = 'base';
+		else if (index === 1)
+			mode.value = 'translate';
+		else if (index === 2)
+			mode.value = 'past_simple';
+		else		
+			mode.value = 'past_participle'
 	}
 
 	const init = () => {
@@ -96,6 +89,10 @@
 		setValues();
 	}
 
+	const choice = (word: string) => {
+		const mode = getMode();
+	}
+
 	init();
 </script>
 
@@ -106,8 +103,9 @@
 		:value="value"
 	/>
 	<Words
-		:mode="getMode()"
+		:mode="mode"
 		:verb="currentVerb"
+		@choice="choice($event)"
 	/>
 	<button @click="simulateEvent">simulate event win condition</button>
 </template>

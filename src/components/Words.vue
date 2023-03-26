@@ -1,17 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import verbs_fr from '../assets/verbs_fr.json';
+import type { Combinaison, mode } from '../shared/interfaces'
 
-type mode = 'base' | 'translate' | 'past_simple' | 'past_participle';
 const COUNT = 20;
-
-interface Combinaison {
-	[base: string]: {
-		translate: string;
-		past_simple: string;
-		past_participle: string;
-	}
-}
 
 const props = defineProps<{ mode: mode, verb: string }>();
 const words = ref<string[]>([]);
@@ -47,7 +39,9 @@ watch(() => props.verb, () => {
 	<div class="flex flex flex-wrap gap-2 w-2/5">
 		<span>Verb = {{ props.verb }}</span>
 		<span>Mode = {{ props.mode }}</span>
-		<div v-for="(word, index) in words" :key="index" class="bg-white p-2 cursor-pointer hover:opacity-50">
+		<div v-for="(word, index) in words" :key="index" class="bg-white p-2 cursor-pointer hover:opacity-50"
+			@click="$emit('choice', word)"
+		>
 			<span>{{ word }}</span>
 		</div>
 	</div>
