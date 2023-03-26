@@ -2,6 +2,10 @@
 	"shared": {
 		"inputs": {
 			"base": "verbal base"
+		},
+		"common": {
+			"lock": "Locked",
+			"unlock": "Unlocked"
 		}
 	}
 }

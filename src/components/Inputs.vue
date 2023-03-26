@@ -3,28 +3,27 @@
 	import { ref, computed } from 'vue';
 
 	interface Input {
-		isSelected: boolean,
-		isDisabled: boolean,
-		value: string | null
+		selected: boolean,
+		disabled: boolean,
+		value: string | undefined
 	}
 
 	const inputs = ref<Input[]>(Array.from({ length: 4 }, () => ({
-		isSelected: false,
-		isDisabled: false,
-		value: null
+		selected: false,
+		disabled: false,
+		value: undefined
 	})));
 
 	const setValues = () => {
 		const fakeFetch = ['Manger', 'eat', 'ate', 'eaten'];
 		inputs.value.forEach((input, index) => {
-			if (input.isDisabled) {
+			if (input.disabled)
 				input.value = fakeFetch[index];
-			}
 		})
 	}
 
 	const init = () => {
-		inputs.value[0].isDisabled = true;
+		inputs.value[0].disabled = true;
 		setValues();
 	}
 
@@ -32,9 +31,9 @@
 </script>
 
 <template>
-	<CustomInput v-for="({isSelected, isDisabled, value}, index) in inputs" :key="index"
-		:isSelected="isSelected"
-		:isDisabled="isDisabled"
+	<CustomInput v-for="({selected, disabled, value}, index) in inputs" :key="index"
+		:selected="selected"
+		:disabled="disabled"
 		:value="value"
 	/>
 </template>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue"
+
+import { ref} from "vue";
+
+defineEmits(['click']);
 
 const props = defineProps({
 	width: {
@@ -10,11 +13,11 @@ const props = defineProps({
 		type: String,
 		default: '80'
 	},
-	isSelected: {
+	selected: {
 		type: Boolean,
 		default: false
 	},
-	isDisabled: {
+	disabled: {
 		type: Boolean,
 		default: false
 	},
@@ -24,13 +27,14 @@ const props = defineProps({
 	}
 })
 
-const isSelected = ref(props.isSelected);
+const selected = ref(props.selected);
 </script>
 
 <template>
-	<input type="text" class="w-[200px] h-[40px] rounded-lg border-solid border-purple-600 outline-none p-2 text-center"
-	:class="[  isSelected && !isDisabled ? 'border-2' : 'border-0',  isDisabled ? 'opacity-50' : '']"
-		@click="isSelected = (!isDisabled ? !isSelected : isSelected)"
-		disabled
-		:value="value ? value : 'Test'" />
+	<div type="text" class="bg-white w-[200px] h-[40px] rounded-lg border-solid border-purple-600 outline-none p-2 text-center"
+		:class="[  selected && !disabled ? 'border-2' : 'border-0',  disabled ? 'opacity-50' : '']"
+		@click="$emit('click')"
+	>
+		<span>{{ value ? value : 'Test' }}</span>
+	</div>
 </template>
