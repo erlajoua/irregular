@@ -1,0 +1,972 @@
+{
+	"abide": {
+		"translate": "respecter",
+		"past_simple": "abode",
+		"past_participle": "abode"
+	},
+	"arise": {
+		"translate": "survenir",
+		"past_simple": "arose",
+		"past_participle": "arisen"
+	},
+	"awake": {
+		"translate": "s'éveiller",
+		"past_simple": "awoke",
+		"past_participle": "awoken"
+	},
+	"be": {
+		"translate": "être",
+		"past_simple": "was/were",
+		"past_participle": "been"
+	},
+	"bear": {
+		"translate": "porter",
+		"past_simple": "bore",
+		"past_participle": "borne"
+	},
+	"beat": {
+		"translate": "battre",
+		"past_simple": "beat",
+		"past_participle": "beaten"
+	},
+	"become": {
+		"translate": "devenir",
+		"past_simple": "became",
+		"past_participle": "become"
+	},
+	"befall": {
+		"translate": "arriver",
+		"past_simple": "befell",
+		"past_participle": "befallen"
+	},
+	"beget": {
+		"translate": "engendrer",
+		"past_simple": "begot",
+		"past_participle": "begotten"
+	},
+	"begin": {
+		"translate": "commencer",
+		"past_simple": "began",
+		"past_participle": "begun"
+	},
+	"behold": {
+		"translate": "contempler",
+		"past_simple": "beheld",
+		"past_participle": "beheld"
+	},
+	"bend": {
+		"translate": "plier",
+		"past_simple": "bent",
+		"past_participle": "bent"
+	},
+	"bereave": {
+		"translate": "dépouiller",
+		"past_simple": "bereft/bereaved",
+		"past_participle": "bereft/bereaved"
+	},
+	"beseech": {
+		"translate": "implorer",
+		"past_simple": "besought/beseeched",
+		"past_participle": "besought/beseeched"
+	},
+	"beset": {
+		"translate": "encercler",
+		"past_simple": "beset",
+		"past_participle": "beset"
+	},
+	"bespeak": {
+		"translate": "témoigner",
+		"past_simple": "bespoke",
+		"past_participle": "bespoken"
+	},
+	"bespread": {
+		"translate": "étendre",
+		"past_simple": "bespread",
+		"past_participle": "bespread"
+	},
+	"bestride": {
+		"translate": "enjamber",
+		"past_simple": "bestrode",
+		"past_participle": "bestridden"
+	},
+	"bet": {
+		"translate": "parier",
+		"past_simple": "bet/betted",
+		"past_participle": "bet/betted"
+	},
+	"bid": {
+		"translate": "offrir",
+		"past_simple": "bid",
+		"past_participle": "bid"
+	},
+	"bind": {
+		"translate": "lier",
+		"past_simple": "bound",
+		"past_participle": "bound"
+	},
+	"bite": {
+		"translate": "mordre",
+		"past_simple": "bit",
+		"past_participle": "bitten"
+	},
+	"bleed": {
+		"translate": "saigner",
+		"past_simple": "bled",
+		"past_participle": "bled"
+	},
+	"blow": {
+		"translate": "souffler",
+		"past_simple": "blew",
+		"past_participle": "blown"
+	},
+	"break": {
+		"translate": "casser",
+		"past_simple": "broke",
+		"past_participle": "broken"
+	},
+	"breed": {
+		"translate": "élever",
+		"past_simple": "bred",
+		"past_participle": "bred"
+	},
+	"bring": {
+		"translate": "apporter",
+		"past_simple": "brought",
+		"past_participle": "brought"
+	},
+	"broadcast": {
+		"translate": "diffuser",
+		"past_simple": "broadcast/broadcasted",
+		"past_participle": "broadcast/broadcasted"
+	},
+	"build": {
+		"translate": "construire",
+		"past_simple": "built",
+		"past_participle": "built"
+	},
+	"burn": {
+		"translate": "brûler",
+		"past_simple": "burned/burnt",
+		"past_participle": "burned/burnt"
+	},
+	"burst": {
+		"translate": "éclater",
+		"past_simple": "burst",
+		"past_participle": "burst"
+	},
+	"buy": {
+		"translate": "acheter",
+		"past_simple": "bought",
+		"past_participle": "bought"
+	},
+	"cast": {
+		"translate": "jeter",
+		"past_simple": "cast",
+		"past_participle": "cast"
+	},
+	"catch": {
+		"translate": "attraper",
+		"past_simple": "caught",
+		"past_participle": "caught"
+	},
+	"choose": {
+		"translate": "choisir",
+		"past_simple": "chose",
+		"past_participle": "chosen"
+	},
+	"cling": {
+		"translate": "s'accrocher",
+		"past_simple": "clung",
+		"past_participle": "clung"
+	},
+	"come": {
+		"translate": "venir",
+		"past_simple": "came",
+		"past_participle": "come"
+	},
+	"cost": {
+		"translate": "coûter",
+		"past_simple": "cost",
+		"past_participle": "cost"
+	},
+	"creep": {
+		"translate": "ramper",
+		"past_simple": "crept",
+		"past_participle": "crept"
+	},
+	"cut": {
+		"translate": "couper",
+		"past_simple": "cut",
+		"past_participle": "cut"
+	},
+	"deal": {
+		"translate": "traiter",
+		"past_simple": "dealt",
+		"past_participle": "dealt"
+	},
+	"dig": {
+		"translate": "creuser",
+		"past_simple": "dug",
+		"past_participle": "dug"
+	},
+	"do": {
+		"translate": "faire",
+		"past_simple": "did",
+		"past_participle": "done"
+	},
+	"draw": {
+		"translate": "dessiner",
+		"past_simple": "drew",
+		"past_participle": "drawn"
+	},
+	"dream": {
+		"translate": "rêver",
+		"past_simple": "dreamed/dreamt",
+		"past_participle": "dreamed/dreamt"
+	},
+	"drink": {
+		"translate": "boire",
+		"past_simple": "drank",
+		"past_participle": "drunk"
+	},
+	"drive": {
+		"translate": "conduire",
+		"past_simple": "drove",
+		"past_participle": "driven"
+	},
+	"eat": {
+		"translate": "manger",
+		"past_simple": "ate",
+		"past_participle": "eaten"
+	},
+	"fall": {
+		"translate": "tomber",
+		"past_simple": "fell",
+		"past_participle": "fallen"
+	},
+	"feed": {
+		"translate": "nourrir",
+		"past_simple": "fed",
+		"past_participle": "fed"
+	},
+	"feel": {
+		"translate": "sentir",
+		"past_simple": "felt",
+		"past_participle": "felt"
+	},
+	"fight": {
+		"translate": "se battre",
+		"past_simple": "fought",
+		"past_participle": "fought"
+	},
+	"find": {
+		"translate": "trouver",
+		"past_simple": "found",
+		"past_participle": "found"
+	},
+	"fit": {
+		"translate": "aller bien à",
+		"past_simple": "fit",
+		"past_participle": "fit"
+	},
+	"flee": {
+		"translate": "s'enfuir",
+		"past_simple": "fled",
+		"past_participle": "fled"
+	},
+	"fling": {
+		"translate": "jeter",
+		"past_simple": "flung",
+		"past_participle": "flung"
+	},
+	"fly": {
+		"translate": "voler",
+		"past_simple": "flew",
+		"past_participle": "flown"
+	},
+	"forbid": {
+		"translate": "interdire",
+		"past_simple": "forbade/forbad",
+		"past_participle": "forbidden"
+	},
+	"forget": {
+		"translate": "oublier",
+		"past_simple": "forgot",
+		"past_participle": "forgotten"
+	},
+	"forgive": {
+		"translate": "pardonner",
+		"past_simple": "forgave",
+		"past_participle": "forgiven"
+	},
+	"freeze": {
+		"translate": "geler",
+		"past_simple": "froze",
+		"past_participle": "frozen"
+	},
+	"get": {
+		"translate": "obtenir",
+		"past_simple": "got",
+		"past_participle": "gotten/got"
+	},
+	"give": {
+		"translate": "donner",
+		"past_simple": "gave",
+		"past_participle": "given"
+	},
+	"go": {
+		"translate": "aller",
+		"past_simple": "went",
+		"past_participle": "gone"
+	},
+	"grind": {
+		"translate": "moudre",
+		"past_simple": "ground",
+		"past_participle": "ground"
+	},
+	"grow": {
+		"translate": "pousser",
+		"past_simple": "grew",
+		"past_participle": "grown"
+	},
+	"hang": {
+		"translate": "pendre",
+		"past_simple": "hung",
+		"past_participle": "hung"
+	},
+	"have": {
+		"translate": "avoir",
+		"past_simple": "had",
+		"past_participle": "had"
+	},
+	"hear": {
+		"translate": "entendre",
+		"past_simple": "heard",
+		"past_participle": "heard"
+	},
+	"hide": {
+		"translate": "cacher",
+		"past_simple": "hid",
+		"past_participle": "hidden"
+	},
+	"hit": {
+		"translate": "frapper",
+		"past_simple": "hit",
+		"past_participle": "hit"
+	},
+	"hold": {
+		"translate": "tenir",
+		"past_simple": "held",
+		"past_participle": "held"
+	},
+	"hurt": {
+		"translate": "blesser",
+		"past_simple": "hurt",
+		"past_participle": "hurt"
+	},
+	"keep": {
+		"translate": "garder",
+		"past_simple": "kept",
+		"past_participle": "kept"
+	},
+	"kneel": {
+		"translate": "s'agenouiller",
+		"past_simple": "knelt/kneeled",
+		"past_participle": "knelt/kneeled"
+	},
+	"know": {
+		"translate": "savoir",
+		"past_simple": "knew",
+		"past_participle": "known"
+	},
+	"lay": {
+		"translate": "poser",
+		"past_simple": "laid",
+		"past_participle": "laid"
+	},
+	"lead": {
+		"translate": "conduire",
+		"past_simple": "led",
+		"past_participle": "led"
+	},
+	"lean": {
+		"translate": "pencher",
+		"past_simple": "leaned/leant",
+		"past_participle": "leaned/leant"
+	},
+	"leap": {
+		"translate": "sauter",
+		"past_simple": "leaped/leapt",
+		"past_participle": "leaped/leapt"
+	},
+	"learn": {
+		"translate": "apprendre",
+		"past_simple": "learned/learnt",
+		"past_participle": "learned/learnt"
+	},
+	"leave": {
+		"translate": "laisser",
+		"past_simple": "left",
+		"past_participle": "left"
+	},
+	"lend": {
+		"translate": "prêter",
+		"past_simple": "lent",
+		"past_participle": "lent"
+	},
+	"let": {
+		"translate": "laisser",
+		"past_simple": "let",
+		"past_participle": "let"
+	},
+	"lie": {
+		"translate": "être couché",
+		"past_simple": "lay",
+		"past_participle": "lain"
+	},
+	"light": {
+		"translate": "allumer",
+		"past_simple": "lit/lighted",
+		"past_participle": "lit/lighted"
+	},
+	"lose": {
+		"translate": "perdre",
+		"past_simple": "lost",
+		"past_participle": "lost"
+	},
+	"make": {
+		"translate": "faire",
+		"past_simple": "made",
+		"past_participle": "made"
+	},
+	"mean": {
+		"translate": "vouloir dire",
+		"past_simple": "meant",
+		"past_participle": "meant"
+	},
+	"meet": {
+		"translate": "rencontrer",
+		"past_simple": "met",
+		"past_participle": "met"
+	},
+	"melt": {
+		"translate": "fondre",
+		"past_simple": "melted",
+		"past_participle": "molten/melted"
+	},
+	"mislead": {
+		"translate": "induire en erreur",
+		"past_simple": "misled",
+		"past_participle": "misled"
+	},
+	"mistake": {
+		"translate": "se tromper",
+		"past_simple": "mistook",
+		"past_participle": "mistaken"
+	},
+	"mow": {
+		"translate": "tondre",
+		"past_simple": "mowed",
+		"past_participle": "mown/mowed"
+	},
+	"overcome": {
+		"translate": "surmonter",
+		"past_simple": "overcame",
+		"past_participle": "overcome"
+	},
+	"overdo": {
+		"translate": "exagérer",
+		"past_simple": "overdid",
+		"past_participle": "overdone"
+	},
+	"overtake": {
+		"translate": "dépasser",
+		"past_simple": "overtook",
+		"past_participle": "overtaken"
+	},
+	"overthrow": {
+		"translate": "renverser",
+		"past_simple": "overthrew",
+		"past_participle": "overthrown"
+	},
+	"pay": {
+		"translate": "payer",
+		"past_simple": "paid",
+		"past_participle": "paid"
+	},
+	"prove": {
+		"translate": "prouver",
+		"past_simple": "proved",
+		"past_participle": "proven/proved"
+	},
+	"put": {
+		"translate": "mettre",
+		"past_simple": "put",
+		"past_participle": "put"
+	},
+	"quit": {
+		"translate": "quitter",
+		"past_simple": "quit",
+		"past_participle": "quit"
+	},
+	"read": {
+		"translate": "lire",
+		"past_simple": "read",
+		"past_participle": "read"
+	},
+	"rid": {
+		"translate": "débarrasser",
+		"past_simple": "rid/ ridded",
+		"past_participle": "rid/ ridded"
+	},
+	"ride": {
+		"translate": "monter (à cheval, à vélo, etc.)",
+		"past_simple": "rode",
+		"past_participle": "ridden"
+	},
+	"ring": {
+		"translate": "sonner",
+		"past_simple": "rang",
+		"past_participle": "rung"
+	},
+	"rise": {
+		"translate": "se lever",
+		"past_simple": "rose",
+		"past_participle": "risen"
+	},
+	"run": {
+		"translate": "courir",
+		"past_simple": "ran",
+		"past_participle": "run"
+	},
+	"saw": {
+		"translate": "scier",
+		"past_simple": "sawed",
+		"past_participle": "sawn/sawed"
+	},
+	"say": {
+		"translate": "dire",
+		"past_simple": "said",
+		"past_participle": "said"
+	},
+	"see": {
+		"translate": "voir",
+		"past_simple": "saw",
+		"past_participle": "seen"
+	},
+	"seek": {
+		"translate": "chercher",
+		"past_simple": "sought",
+		"past_participle": "sought"
+	},
+	"sell": {
+		"translate": "vendre",
+		"past_simple": "sold",
+		"past_participle": "sold"
+	},
+	"send": {
+		"translate": "envoyer",
+		"past_simple": "sent",
+		"past_participle": "sent"
+	},
+	"set": {
+		"translate": "poser, mettre",
+		"past_simple": "set",
+		"past_participle": "set"
+	},
+	"sew": {
+		"translate": "coudre",
+		"past_simple": "sewed",
+		"past_participle": "sewn/sewed"
+	},
+	"shake": {
+		"translate": "secouer",
+		"past_simple": "shook",
+		"past_participle": "shaken"
+	},
+	"shave": {
+		"translate": "raser",
+		"past_simple": "shaved",
+		"past_participle": "shaved/shaven"
+	},
+	"shear": {
+		"translate": "tailler",
+		"past_simple": "sheared/shore",
+		"past_participle": "sheared/shorn"
+	},
+	"shed": {
+		"translate": "abandonner",
+		"past_simple": "shed",
+		"past_participle": "shed"
+	},
+	"shine": {
+		"translate": "briller",
+		"past_simple": "shone",
+		"past_participle": "shone"
+	},
+	"shoe": {
+		"translate": "chausser",
+		"past_simple": "shod",
+		"past_participle": "shod"
+	},
+	"shoot": {
+		"translate": "tirer",
+		"past_simple": "shot",
+		"past_participle": "shot"
+	},
+	"show": {
+		"translate": "montrer",
+		"past_simple": "showed",
+		"past_participle": "shown/showed"
+	},
+	"shrink": {
+		"translate": "rétrécir",
+		"past_simple": "shrank/shrunk",
+		"past_participle": "shrunk"
+	},
+	"shut": {
+		"translate": "fermer",
+		"past_simple": "shut",
+		"past_participle": "shut"
+	},
+	"sing": {
+		"translate": "chanter",
+		"past_simple": "sang",
+		"past_participle": "sung"
+	},
+	"sink": {
+		"translate": "couler",
+		"past_simple": "sank/sunk",
+		"past_participle": "sunk"
+	},
+	"sit": {
+		"translate": "s'asseoir",
+		"past_simple": "sat",
+		"past_participle": "sat"
+	},
+	"slay": {
+		"translate": "tuer",
+		"past_simple": "slew/slayed",
+		"past_participle": "slain/slayed"
+	},
+	"sleep": {
+		"translate": "dormir",
+		"past_simple": "slept",
+		"past_participle": "slept"
+	},
+	"slide": {
+		"translate": "glisser",
+		"past_simple": "slid",
+		"past_participle": "slid"
+	},
+	"sling": {
+		"translate": "lancer",
+		"past_simple": "slung",
+		"past_participle": "slung"
+	},
+	"slit": {
+		"translate": "entrouvrir",
+		"past_simple": "slit",
+		"past_participle": "slit"
+	},
+	"smell": {
+		"translate": "sentir (odorat)",
+		"past_simple": "smelt/smelled",
+		"past_participle": "smelt/smelled"
+	},
+	"smite": {
+		"translate": "frapper",
+		"past_simple": "smote",
+		"past_participle": "smitten"
+	},
+	"sow": {
+		"translate": "semer",
+		"past_simple": "sowed",
+		"past_participle": "sown/sowed"
+	},
+	"spear": {
+		"translate": "lancer une lance",
+		"past_simple": "speared",
+		"past_participle": "speared"
+	},
+	"speed": {
+		"translate": "accélérer",
+		"past_simple": "sped/speeded",
+		"past_participle": "sped/speeded"
+	},
+	"spell": {
+		"translate": "épeler",
+		"past_simple": "spelled/spelt",
+		"past_participle": "spelled/spelt"
+	},
+	"spend": {
+		"translate": "dépenser",
+		"past_simple": "spent",
+		"past_participle": "spent"
+	},
+	"spill": {
+		"translate": "renverser",
+		"past_simple": "spilled/spilt",
+		"past_participle": "spilled/spilt"
+	},
+	"spin": {
+		"translate": "tourner",
+		"past_simple": "spun",
+		"past_participle": "spun"
+	},
+	"spit": {
+		"translate": "cracher",
+		"past_simple": "spat/spit",
+		"past_participle": "spat/spit"
+	},
+	"split": {
+		"translate": "diviser",
+		"past_simple": "split",
+		"past_participle": "split"
+	},
+	"spoil": {
+		"translate": "gâcher",
+		"past_simple": "spoiled/spoilt",
+		"past_participle": "spoiled/spoilt"
+	},
+	"spray": {
+		"translate": "pulvériser",
+		"past_simple": "sprayed",
+		"past_participle": "sprayed"
+	},
+	"speak": {
+        "translate": "parler",
+        "past_simple": "spoke",
+        "past_participle": "spoken"
+    },
+	"spread": {
+		"translate": "étaler",
+		"past_simple": "spread",
+		"past_participle": "spread"
+	},
+	"spring": {
+		"translate": "sauter",
+		"past_simple": "sprang/sprung",
+		"past_participle": "sprung"
+	},
+	"stand": {
+		"translate": "se tenir debout",
+		"past_simple": "stood",
+		"past_participle": "stood"
+	},
+	"steal": {
+		"translate": "voler",
+		"past_simple": "stole",
+		"past_participle": "stolen"
+	},
+	"stick": {
+		"translate": "coller",
+		"past_simple": "stuck",
+		"past_participle": "stuck"
+	},
+	"sting": {
+		"translate": "piquer",
+		"past_simple": "stung",
+		"past_participle": "stung"
+	},
+	"stink": {
+		"translate": "sentir mauvais",
+		"past_simple": "stank/stunk",
+		"past_participle": "stunk"
+	},
+	"strew": {
+		"translate": "éparpiller",
+		"past_simple": "strewed",
+		"past_participle": "strewn/strewed"
+	},
+	"stride": {
+		"translate": "marcher à grands pas",
+		"past_simple": "strode",
+		"past_participle": "stridden"
+	},
+	"strike": {
+        "translate": "frapper",
+        "past_simple": "struck",
+        "past_participle": "struck"
+    },
+    "string": {
+        "translate": "attacher avec une corde",
+        "past_simple": "strung",
+        "past_participle": "strung"
+    },
+    "strive": {
+        "translate": "s'efforcer",
+        "past_simple": "strove/strived",
+        "past_participle": "striven/strived"
+    },
+    "sublet": {
+        "translate": "sous-louer",
+        "past_simple": "sublet",
+        "past_participle": "sublet"
+    },
+    "swear": {
+        "translate": "jurer",
+        "past_simple": "swore",
+        "past_participle": "sworn"
+    },
+    "sweep": {
+        "translate": "balayer",
+        "past_simple": "swept",
+        "past_participle": "swept"
+    },
+    "swell": {
+        "translate": "enfler",
+        "past_simple": "swelled",
+        "past_participle": "swollen"
+    },
+    "swim": {
+        "translate": "nager",
+        "past_simple": "swam",
+        "past_participle": "swum"
+    },
+    "swing": {
+        "translate": "balancer",
+        "past_simple": "swung",
+        "past_participle": "swung"
+    },
+    "take": {
+        "translate": "prendre",
+        "past_simple": "took",
+        "past_participle": "taken"
+    },
+    "teach": {
+        "translate": "enseigner",
+        "past_simple": "taught",
+        "past_participle": "taught"
+    },
+    "tear": {
+        "translate": "déchirer",
+        "past_simple": "tore",
+        "past_participle": "torn"
+    },
+    "tell": {
+        "translate": "dire",
+        "past_simple": "told",
+        "past_participle": "told"
+    },
+    "think": {
+        "translate": "penser",
+        "past_simple": "thought",
+        "past_participle": "thought"
+    },
+    "throw": {
+        "translate": "jeter",
+        "past_simple": "threw",
+        "past_participle": "thrown"
+    },
+    "thrust": {
+        "translate": "enfoncer",
+        "past_simple": "thrust",
+        "past_participle": "thrust"
+    },
+    "tread": {
+        "translate": "piétiner",
+        "past_simple": "trod",
+        "past_participle": "trodden/tread"
+    },
+    "undergo": {
+        "translate": "subir",
+        "past_simple": "underwent",
+        "past_participle": "undergone"
+    },
+    "understand": {
+        "translate": "comprendre",
+        "past_simple": "understood",
+        "past_participle": "understood"
+    },
+	"undertake": {
+        "translate": "entreprendre",
+        "past_simple": "undertook",
+        "past_participle": "undertaken"
+    },
+    "undraw": {
+        "translate": "défaire un dessin",
+        "past_simple": "undrew",
+        "past_participle": "undrawn"
+    },
+    "unfreeze": {
+        "translate": "dégeler",
+        "past_simple": "unfroze",
+        "past_participle": "unfrozen"
+    },
+    "unsay": {
+        "translate": "dédir",
+        "past_simple": "unsaid",
+        "past_participle": "unsaid"
+    },
+    "unwind": {
+        "translate": "dérouler",
+        "past_simple": "unwound",
+        "past_participle": "unwound"
+    },
+    "uphold": {
+        "translate": "soutenir",
+        "past_simple": "upheld",
+        "past_participle": "upheld"
+    },
+    "upset": {
+        "translate": "bouleverser",
+        "past_simple": "upset",
+        "past_participle": "upset"
+    },
+    "wake": {
+        "translate": "réveiller",
+        "past_simple": "woke",
+        "past_participle": "woken"
+    },
+    "waylay": {
+        "translate": "tendre une embuscade",
+        "past_simple": "waylaid",
+        "past_participle": "waylaid"
+    },
+    "wear": {
+        "translate": "porter (vêtement)",
+        "past_simple": "wore",
+        "past_participle": "worn"
+    },
+    "weave": {
+        "translate": "tisser",
+        "past_simple": "wove",
+        "past_participle": "woven"
+    },
+    "wed": {
+        "translate": "se marier",
+        "past_simple": "wed/wedded",
+        "past_participle": "wed/wedded"
+    },
+    "weep": {
+        "translate": "pleurer",
+        "past_simple": "wept",
+        "past_participle": "wept"
+    },
+    "win": {
+        "translate": "gagner",
+        "past_simple": "won",
+        "past_participle": "won"
+    },
+    "wind": {
+        "translate": "enrouler",
+        "past_simple": "wound",
+        "past_participle": "wound"
+    },
+    "withdraw": {
+        "translate": "retirer",
+        "past_simple": "withdrew",
+        "past_participle": "withdrawn"
+    },
+    "withhold": {
+        "translate": "retenir",
+        "past_simple": "withheld",
+        "past_participle": "withheld"
+    },
+    "withstand": {
+        "translate": "résister à",
+        "past_simple": "withstood",
+        "past_participle": "withstood"
+    }
+}

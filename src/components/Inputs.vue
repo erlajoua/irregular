@@ -1,5 +1,6 @@
 <script setup lang="ts">
 	import CustomInput from './CustomInput.vue';
+	import Words from './Words.vue';
 	import { ref, computed } from 'vue';
 
 	interface Input {
@@ -42,5 +43,9 @@
 		:selected="selected"
 		:disabled="disabled"
 		:value="value"
+	/>
+	<Words
+		mode="base"
+		verb="be"
 	/>
 </template>
