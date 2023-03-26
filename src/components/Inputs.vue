@@ -3,6 +3,7 @@
 	import Words from './Words.vue';
 	import { ref } from 'vue';
 	import verbs_fr from '../assets/verbs_fr.json'
+import { objectToString } from '@vue/shared';
 
 	interface Input {
 		selected: boolean,
@@ -11,12 +12,16 @@
 	}
 
 	interface Combinaison {
-	[base: string]: {
+		[base: string]: SubCombinaison
+	}
+
+	interface SubCombinaison {
 		translate: string;
 		past_simple: string;
 		past_participle: string;
 	}
-}
+
+	const props = defineProps<{inputs: boolean[]}>()
 
 	let currentVerb = ref<string>('');
 
@@ -26,12 +31,26 @@
 		value: undefined
 	})));
 
-	const setValues = () => {
-		const fakeFetch = ['Manger', 'eat', 'ate', 'eaten'];
-		inputs.value.forEach((input, index) => {
-			if (input.disabled)
-				input.value = fakeFetch[index];
+	const setDisabled = () => {
+		inputs.value.forEach((input: Input, index: number) => {
+			input.disabled = props.inputs[index];
 		})
+	}
+	
+	const setValues = () => {
+		const combinaison = getVerbCombinaison(currentVerb.value);
+		inputs.value.forEach((input, index) => {
+			if (input.disabled) {
+				if (index === 0)
+					input.value = currentVerb.value;
+				else
+					input.value = combinaison[Object.keys(combinaison)[index - 1] as keyof SubCombinaison];
+			}
+		})
+		let tmp;
+		tmp = inputs.value[0].value;
+		inputs.value[0].value = inputs.value[1].value;
+		inputs.value[1].value = tmp;
 	}
 
 	const setSelected = () => {
@@ -40,19 +59,30 @@
 			input.selected = true;
 	}
 
-	const init = () => {
-		inputs.value[0].disabled = true;
-		setValues();
-		setSelected();
-		currentVerb.value = simulateEvent();
+	const getVerbCombinaison = (verb: string) => {
+		return (verbs_fr as Combinaison)[verb];
 	}
 
-	const simulateEvent = () => {
+	const init = () => {
+		inputs.value[0].disabled = true;
+		setDisabled();
+		setSelected();
+		currentVerb.value = getNewVerb();
+		setValues();
+	}
+
+	const getNewVerb = () => {
 		const verbs = Object.keys(verbs_fr);
 		let verb = verbs[Math.floor(Math.random() * verbs.length)]
 		while (verb === currentVerb.value)
 			verb = verbs[Math.floor(Math.random() * verbs.length)]
 		return verb;
+	}
+
+	const simulateEvent = () => {
+		currentVerb.value = getNewVerb();
+		setSelected();
+		setValues();
 	}
 
 	init();
@@ -68,5 +98,5 @@
 		mode="base"
 		:verb="currentVerb"
 	/>
-	<button @click="simulateEvent">simulate event</button>
+	<button @click="simulateEvent">simulate event win condition</button>
 </template>

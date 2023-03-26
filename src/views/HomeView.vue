@@ -4,6 +4,12 @@
   import { ref } from 'vue';
   
   const showGame = ref(false);
+  const inputs= ref<boolean[]>([]);
+
+  const play = (inputsEvent: []) => {
+    inputs.value = inputsEvent;
+    showGame.value = true;
+  }
 </script>
 
 <template>
@@ -13,9 +19,12 @@
       
       <Locks
         v-if="!showGame"
+        @play="play($event)"
       />
-      <Inputs v-else />
-      <button @click="showGame = !showGame">Switch</button>
+      <Inputs
+        v-else
+        :inputs="inputs"
+      />
     </div>
 
   </div>

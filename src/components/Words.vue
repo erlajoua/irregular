@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import verbs_fr from '../assets/verbs_fr.json';
 
 type mode = 'base' | 'translate' | 'past_simple' | 'past_participle';
@@ -37,7 +37,10 @@ const getWords = ((mode: mode, verb: string) => {
 		words.value = randomVerbs.map(verb => (verbs_fr as Combinaison)[verb][mode]);
 })
 
-getWords(props.mode, props.verb);
+watch(() => props.verb, () => {
+	getWords(props.mode, props.verb)
+}, { immediate: true })
+
 </script>
 
 <template>
