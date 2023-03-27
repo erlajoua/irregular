@@ -6,7 +6,13 @@ module.exports = {
     './src/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#0095C3', //actual blue
+        secondary: '#FE8210', //actual orange
+        valid: '#00C12B',
+      },
+    },
   },
   plugins: []
 }

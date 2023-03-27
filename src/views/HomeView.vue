@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <div class="w-screen h-screen bg-[#0095C3]">
+  <div class="w-screen h-screen bg-primary">
     <ChangeLanguage />
     <div class="flex items-center justify-center flex-col gap-4">
       <Locks

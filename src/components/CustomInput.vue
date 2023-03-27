@@ -24,13 +24,13 @@ defineProps({
 		<div
 			type="text"
 			class="bg-white w-[200px] h-[40px] rounded-lg border-solid outline-none p-6 text-center flex items-center justify-center"
-			:class="[selected && value === '' && !disabled ? 'border-2 border-[#FF8A00]' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' ? 'border-2 border-[#00C12B]' : '']"
+			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' ? 'border-2 border-valid' : '']"
 			@click="$emit('click')"
 		>
 			<span v-if="value !== ''" class="font-bold"
-				:class="selected && value !== '' ? 'text-[#00C12B]' : ''"
+				:class="selected && value !== '' ? 'text-valid' : ''"
 			>{{ value }}</span>
-			<span v-else-if="selected && value === ''" class="text-[#FF8A00]">Select the answer</span>
+			<span v-else-if="selected && value === ''" class="text-secondary">Select the answer</span>
 		</div>
 	</div>
 </template>

@@ -37,7 +37,7 @@ watch(() => [props.verb, props.mode], () => {
 
 <template>
 	<div class="flex flex flex-wrap gap-2 w-2/5">
-		<div v-for="(word, index) in words" :key="index" class="bg-white p-2 cursor-pointer hover:opacity-50"
+		<div v-for="(word, index) in words" :key="index" class="bg-white p-2 cursor-pointer hover:opacity-50 rounded-md"
 			@click="$emit('choice', word)"
 		>
 			<span>{{ word }}</span>
