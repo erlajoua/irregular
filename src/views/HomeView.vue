@@ -16,7 +16,7 @@
 <template>
   <div class="w-screen h-screen bg-[#0095C3]">
     <ChangeLanguage />
-    <div class="flex items-center justify-center flex-col gap-2">
+    <div class="flex items-center justify-center flex-col gap-4">
       <Locks
         v-if="!showGame"
         @play="play($event)"
