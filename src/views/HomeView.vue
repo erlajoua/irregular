@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="w-screen h-screen bg-blue-500">
+  <div class="w-screen h-screen bg-[#0095C3]">
     <h1 class="bg-red-500">{{ $t('shared.inputs.base') }}</h1>
     <div class="flex items-center justify-center flex-col  gap-2">
       
@@ -21,10 +21,12 @@
         v-if="!showGame"
         @play="play($event)"
       />
-      <Inputs
-        v-else
-        :inputs="inputs"
-      />
+      <template v-else>
+        <Inputs
+          :inputs="inputs"
+        />
+        <button @click="showGame = false">Retour</button>
+      </template>
     </div>
 
   </div>

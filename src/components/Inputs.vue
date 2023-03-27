@@ -11,6 +11,13 @@
 		value: string | undefined
 	}
 
+	enum Modes {
+		Translate,
+		Base,
+		PastSimple,
+		PastParticple
+	}
+
 	const props = defineProps<{inputs: boolean[]}>()
 
 	let currentVerb = ref<string>('');
@@ -60,13 +67,13 @@
 	const getMode = () => {
 		const index = inputs.value.findIndex(input => input.selected === true && input.value === '');
 
-		if (index === 1)
+		if (index === Modes.Base)
 			mode.value = 'base';
-		else if (index === 0)
+		else if (index === Modes.Translate)
 			mode.value = 'translate';
-		else if (index === 2)
+		else if (index === Modes.PastSimple)
 			mode.value = 'past_simple';
-		else		
+		else	
 			mode.value = 'past_participle'
 	}
 
