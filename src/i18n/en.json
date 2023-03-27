@@ -5,7 +5,9 @@
 		},
 		"common": {
 			"lock": "Locked",
-			"unlock": "Unlocked"
+			"unlock": "Unlocked",
+			"back": "Back",
+			"play": "Play"
 		}
 	}
 }

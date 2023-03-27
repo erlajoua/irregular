@@ -22,5 +22,5 @@
 		@click="test(index)"
 		:value="input ? $t('shared.common.lock') : $t('shared.common.unlock')"
 	/>
-	<button @click="$emit('play', inputs)">Play</button>
+	<button @click="$emit('play', inputs)">{{ $t('shared.common.play') }}</button>
 </template>

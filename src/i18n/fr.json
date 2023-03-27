@@ -5,7 +5,9 @@
 		},
 		"common": {
 			"lock": "Vérouillé",
-			"unlock": "Dévérouillé"
+			"unlock": "Dévérouillé",
+			"back": "Retour",
+			"play": "Jouer"
 		}
 	}
 }

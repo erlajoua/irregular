@@ -11,6 +11,7 @@ import './assets/main.css'
 const i18n = createI18n({
 	locale: 'en',
 	fallbackLocale: 'en',
+	legacy: false,
 	messages: {
 	  en,
 	  fr

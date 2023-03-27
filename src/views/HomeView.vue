@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import Inputs from '@/components/Inputs.vue';
   import Locks from '@/components/Locks.vue';
+  import ChangeLanguage from '@/components/ChangeLanguage.vue';
   import { ref } from 'vue';
   
   const showGame = ref(false);
@@ -14,9 +15,8 @@
 
 <template>
   <div class="w-screen h-screen bg-[#0095C3]">
-    <h1 class="bg-red-500">{{ $t('shared.inputs.base') }}</h1>
-    <div class="flex items-center justify-center flex-col  gap-2">
-      
+    <ChangeLanguage />
+    <div class="flex items-center justify-center flex-col gap-2">
       <Locks
         v-if="!showGame"
         @play="play($event)"
@@ -25,7 +25,7 @@
         <Inputs
           :inputs="inputs"
         />
-        <button @click="showGame = false">Retour</button>
+        <button @click="showGame = false">{{ $t('shared.common.back') }}</button>
       </template>
     </div>
 
