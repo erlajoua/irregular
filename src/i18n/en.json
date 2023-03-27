@@ -8,6 +8,12 @@
 			"unlock": "Unlocked",
 			"back": "Back",
 			"play": "Play"
+		},
+		"modes": {
+			"translate": "Translation",
+			"base": "Verbal base",
+			"past_simple": "Preterit",
+			"past_participle": "Past participle"
 		}
 	}
 }

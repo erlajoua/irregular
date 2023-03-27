@@ -3,6 +3,9 @@
 	import Words from './Words.vue';
 	import { ref } from 'vue';
 	import verbs_fr from '../assets/verbs_fr.json'
+	import { modes } from '../shared/const'
+	import { useI18n } from 'vue-i18n';
+
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
 	interface Input {
@@ -20,8 +23,18 @@
 
 	const props = defineProps<{inputs: boolean[]}>()
 
-	let currentVerb = ref<string>('');
-	let mode = ref<mode>('base');
+	const { t } = useI18n();
+
+	const currentVerb = ref<string>('');
+	const mode = ref<mode>('base');
+	// const modes = ref<string[]>([
+	// 	t('shared.modes.translation'),
+	// 	t('shared.modes.verbalBase'),
+	// 	t('shared.modes.pastSimple'),
+	// 	t('shared.modes.pastParticiple')
+	// ]);
+
+	// console.log("modes = ", modes.value);
 
 	const inputs = ref<Input[]>(Array.from({ length: 4 }, () => ({
 		selected: false,
@@ -122,6 +135,7 @@
 		:selected="input.selected"
 		:disabled="input.disabled"
 		:value="input.value"
+		:label="$t(`shared.modes.${modes[index]}`)"
 	/>
 	<Words
 		:mode="mode"

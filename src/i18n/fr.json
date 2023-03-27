@@ -8,6 +8,12 @@
 			"unlock": "Dévérouillé",
 			"back": "Retour",
 			"play": "Jouer"
+		},
+		"modes": {
+			"translate": "Traduction",
+			"base": "Base verbale",
+			"past_simple": "Prétérit",
+			"past_participle": "Participe passé"
 		}
 	}
 }

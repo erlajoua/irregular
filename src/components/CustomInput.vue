@@ -11,11 +11,15 @@ defineProps({
 	},
 	value: {
 		type: String
+	},
+	label: {
+		type: String
 	}
 })
 </script>
 
 <template>
+	<span>{{ label }}:</span>
 	<div
 		type="text"
 		class="bg-white w-[200px] h-[40px] rounded-lg border-solid outline-none p-2 text-center"
