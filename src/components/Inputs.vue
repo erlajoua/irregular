@@ -58,7 +58,7 @@
 	}
 
 	const getMode = () => {
-		const index = inputs.value.findIndex(input => input.selected === true);
+		const index = inputs.value.findIndex(input => input.selected === true && input.value === '');
 
 		if (index === 1)
 			mode.value = 'base';
@@ -88,15 +88,18 @@
 
 	const choice = (word: string) => {
 		if ((mode.value === 'base' && currentVerb.value === word) || getVerbCombinaison(currentVerb.value)[mode.value as keyof SubCombinaison] === word) {
-			let input = inputs.value.find(input => input.selected === true);
+			let input = inputs.value.find(input => input.selected === true && input.value === '');
 			if (input) {
-				input.selected = false;
+				// input.selected = false;
 				input.value = word;
 				setSelected();
 				getMode();
 			}
 		}
 		if (inputs.value.every(input => input.value !== '')) {
+			inputs.value.forEach(input => {
+				input.selected = false;
+			})
 			currentVerb.value = getNewVerb();
 			setValues();
 			setSelected();

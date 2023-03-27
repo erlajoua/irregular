@@ -3,14 +3,6 @@
 defineEmits(['click']);
 
 defineProps({
-	width: {
-		type: String,
-		default: '200'
-	},
-	height: {
-		type: String,
-		default: '80'
-	},
 	selected: {
 		type: Boolean
 	},
@@ -24,8 +16,10 @@ defineProps({
 </script>
 
 <template>
-	<div type="text" class="bg-white w-[200px] h-[40px] rounded-lg border-solid border-purple-600 outline-none p-2 text-center"
-		:class="[  selected && !disabled ? 'border-2' : 'border-0',  disabled ? 'opacity-50' : '']"
+	<div
+		type="text"
+		class="bg-white w-[200px] h-[40px] rounded-lg border-solid outline-none p-2 text-center"
+		:class="[selected && value === '' && !disabled ? 'border-2 border-purple-600' : 'border-0', disabled ? 'opacity-50' : '', selected && value !== '' ? 'border-2 border-amber-500' : '']"
 		@click="$emit('click')"
 	>
 		<span v-if="value !== ''">{{ value }}</span>
