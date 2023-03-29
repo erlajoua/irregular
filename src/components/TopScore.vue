@@ -1,16 +1,11 @@
 <script setup lang="ts">
-	import { ref } from 'vue';
+import { useStore } from '../shared/store'
 
-	const getTopScore = () => {
-		const topScore = localStorage.getItem('topScore');
-		return topScore ? parseInt(topScore) : -1;
-	}
-
-	const topScore = ref(getTopScore());
+const store = useStore()
 </script>
 
 <template>
-	<div v-if="topScore !== -1">
-		<span class="text-bold text-white text-lg"> {{$t('common.topScore')}} : {{ topScore }}</span>
+	<div v-if="store.topScore !== -1">
+	  <span class="text-bold text-white text-lg"> {{$t('common.topScore')}} : {{ store.topScore }}</span>
 	</div>
-</template>
+  </template>

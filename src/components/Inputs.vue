@@ -6,7 +6,7 @@
 	import verbs_fr from '../assets/verbs_fr.json'
 	import { modes } from '../shared/const'
 	import { useI18n } from 'vue-i18n';
-	import { getTopScore, updateTopScore } from '../shared/utils'
+	import { useStore } from '@/shared/store';
 
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
@@ -26,9 +26,8 @@
 		PastParticple
 	}
 
+	const store = useStore()
 	const props = defineProps<{inputs: boolean[]}>()
-
-	const { t } = useI18n();
 
 	const currentVerb = ref<string>('');
 	const score = ref(0);
@@ -142,8 +141,8 @@
 			setSelected();
 			getMode();
 			score.value++;
-			if (score.value > getTopScore()) {
-				updateTopScore(score.value);
+			if (score.value > store.topScore) {
+				store.updateTopScore(score.value);
 			}
 		}
 	}
