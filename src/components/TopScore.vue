@@ -7,8 +7,6 @@
 	}
 
 	const topScore = ref(getTopScore());
-
-
 </script>
 
 <template>

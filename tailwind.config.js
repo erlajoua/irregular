@@ -11,7 +11,8 @@ module.exports = {
         primary: '#0095C3', //actual blue
         secondary: '#FE8210', //actual orange
         tertiary: "#FFB950",
-        valid: '#00C12B'
+        valid: '#00C12B',
+        error: "#CB4242"
       },
     },
   },

@@ -17,6 +17,10 @@ const props = defineProps({
 	},
 	locks: {
 		type: Boolean
+	},
+	error: {
+		type: Boolean,
+		default: false
 	}
 })
 </script>
@@ -27,11 +31,11 @@ const props = defineProps({
 		<div
 			type="text"
 			class="bg-white w-[200px] h-[40px] rounded-lg border-solid outline-none p-6 text-center flex items-center justify-center"
-			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' ? 'border-2 border-valid' : '', props.locks ? 'cursor-pointer hover:opacity-80': '']"
+			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' ? 'border-2 border-valid' : '', props.locks ? 'cursor-pointer hover:opacity-80': '', value !== '' && error ? 'border-2 border-error' : '']"
 			@click="$emit('click')"
 		>
 			<span v-if="value !== ''" class="font-bold"
-				:class="selected && value !== '' ? 'text-valid' : ''"
+				:class="selected && value !== '' && !error ? 'text-valid' : error === true && value !== '' ? 'text-error': ''"
 			>{{ value }}</span>
 			<span v-else-if="selected && value === ''" class="text-secondary">Select the answer</span>
 		</div>

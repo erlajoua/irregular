@@ -10,10 +10,13 @@
 
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
+	const TIMER_ERROR = 1500;
+
 	interface Input {
 		selected: boolean,
 		disabled: boolean,
-		value: string | undefined
+		value: string | undefined,
+		error: boolean
 	}
 
 	enum Modes {
@@ -29,12 +32,14 @@
 
 	const currentVerb = ref<string>('');
 	const score = ref(0);
+	let timerId: number | undefined = undefined;
 	const mode = ref<mode>('base');
 
 	const inputs = ref<Input[]>(Array.from({ length: 4 }, () => ({
 		selected: false,
 		disabled: false,
-		value: undefined
+		value: undefined,
+		error: false
 	})));
 
 	const setDisabled = () => {
@@ -104,12 +109,27 @@
 	
 
 	const choice = (word: string) => {
+		let input = inputs.value.find(input => input.selected === true && (input.value === '' || input.value !== '' && input.error === true));
 		if ((mode.value === 'base' && currentVerb.value === word) || getVerbCombinaison(currentVerb.value)[mode.value as keyof SubCombinaison] === word) {
-			let input = inputs.value.find(input => input.selected === true && input.value === '');
+			clearTimeout(timerId);
 			if (input) {
+				input.error = false;
 				input.value = word;
 				setSelected();
 				getMode();
+			}
+		}
+		else {
+			clearTimeout(timerId);
+			if (input) {
+				input.value = word;
+				input.error = true;
+				timerId = setTimeout(() => {
+					if (input) {
+						input.value = '';
+						input.error = false;
+					}
+				}, TIMER_ERROR);
 			}
 		}
 		if (inputs.value.every(input => input.value !== '')) {
@@ -132,11 +152,12 @@
 
 <template>
 	<Score :score="score" />
-	<CustomInput v-for="(input, index) in inputs" :key="index"
-		:selected="input.selected"
-		:disabled="input.disabled"
-		:value="input.value"
+	<CustomInput v-for="({selected, disabled, value, error}, index) in inputs" :key="index"
+		:selected="selected"
+		:disabled="disabled"
+		:value="value"
 		:label="$t(`modes.${modes[index]}`)"
+		:error="error"
 	/>
 	<Words
 		:mode="mode"
