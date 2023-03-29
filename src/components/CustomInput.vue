@@ -2,7 +2,7 @@
 
 defineEmits(['click']);
 
-defineProps({
+const props = defineProps({
 	selected: {
 		type: Boolean
 	},
@@ -14,6 +14,9 @@ defineProps({
 	},
 	label: {
 		type: String
+	},
+	locks: {
+		type: Boolean
 	}
 })
 </script>
@@ -24,7 +27,7 @@ defineProps({
 		<div
 			type="text"
 			class="bg-white w-[200px] h-[40px] rounded-lg border-solid outline-none p-6 text-center flex items-center justify-center"
-			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' ? 'border-2 border-valid' : '']"
+			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' ? 'border-2 border-valid' : '', props.locks ? 'cursor-pointer hover:opacity-80': '']"
 			@click="$emit('click')"
 		>
 			<span v-if="value !== ''" class="font-bold"

@@ -1,10 +1,12 @@
 <script setup lang="ts">
 	import CustomInput from './CustomInput.vue';
+	import Score from './Score.vue'
 	import Words from './Words.vue';
 	import { ref } from 'vue';
 	import verbs_fr from '../assets/verbs_fr.json'
 	import { modes } from '../shared/const'
 	import { useI18n } from 'vue-i18n';
+	import { getTopScore, updateTopScore } from '../shared/utils'
 
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
@@ -26,15 +28,8 @@
 	const { t } = useI18n();
 
 	const currentVerb = ref<string>('');
+	const score = ref(0);
 	const mode = ref<mode>('base');
-	// const modes = ref<string[]>([
-	// 	t('shared.modes.translation'),
-	// 	t('shared.modes.verbalBase'),
-	// 	t('shared.modes.pastSimple'),
-	// 	t('shared.modes.pastParticiple')
-	// ]);
-
-	// console.log("modes = ", modes.value);
 
 	const inputs = ref<Input[]>(Array.from({ length: 4 }, () => ({
 		selected: false,
@@ -106,11 +101,12 @@
 		return verb;
 	}
 
+	
+
 	const choice = (word: string) => {
 		if ((mode.value === 'base' && currentVerb.value === word) || getVerbCombinaison(currentVerb.value)[mode.value as keyof SubCombinaison] === word) {
 			let input = inputs.value.find(input => input.selected === true && input.value === '');
 			if (input) {
-				// input.selected = false;
 				input.value = word;
 				setSelected();
 				getMode();
@@ -124,6 +120,10 @@
 			setValues();
 			setSelected();
 			getMode();
+			score.value++;
+			if (score.value > getTopScore()) {
+				updateTopScore(score.value);
+			}
 		}
 	}
 
@@ -131,11 +131,12 @@
 </script>
 
 <template>
+	<Score :score="score" />
 	<CustomInput v-for="(input, index) in inputs" :key="index"
 		:selected="input.selected"
 		:disabled="input.disabled"
 		:value="input.value"
-		:label="$t(`shared.modes.${modes[index]}`)"
+		:label="$t(`modes.${modes[index]}`)"
 	/>
 	<Words
 		:mode="mode"

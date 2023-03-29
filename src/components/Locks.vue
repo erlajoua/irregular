@@ -19,6 +19,18 @@ const test = (index: number) => {
 
 <template>
 	<CustomInput v-for="(input, index) in inputs" :key="index" :disabled="input" @click="test(index)"
-		:value="input ? $t('shared.common.lock') : $t('shared.common.unlock')" :label="$t(`shared.modes.${modes[index]}`)" />
-	<button @click="$emit('play', inputs)">{{ $t('shared.common.play') }}</button>
+		:value="input ? $t('common.lock') : $t('common.unlock')" :label="$t(`modes.${modes[index]}`)"
+		:locks="true"
+		/>
+	<div
+		class="bg-tertiary shadow rounded-2xl py-2 px-8 cursor-pointer hover:opacity-80"
+		@click="$emit('play', inputs)"
+	><span class="font-bold text-md">{{ $t('common.play') }}</span></div>
 </template>
+
+<style scoped>
+	.shadow {
+		-webkit-box-shadow: 0px 3px 0px 0px #E1A447; 
+		box-shadow: 0px 3px 0px 0px #E1A447;
+	}
+</style>

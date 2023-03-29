@@ -1,19 +1,19 @@
 {
-	"shared": {
-		"inputs": {
-			"base": "verbal base"
-		},
-		"common": {
-			"lock": "Locked",
-			"unlock": "Unlocked",
-			"back": "Back",
-			"play": "Play"
-		},
-		"modes": {
-			"translate": "Translation",
-			"base": "Verbal base",
-			"past_simple": "Preterit",
-			"past_participle": "Past participle"
-		}
+	"inputs": {
+		"base": "verbal base"
+	},
+	"common": {
+		"lock": "Locked",
+		"unlock": "Unlocked",
+		"back": "Back",
+		"play": "Play",
+		"topScore": "Top score",
+		"score": "Score"
+	},
+	"modes": {
+		"translate": "Translation",
+		"base": "Verbal base",
+		"past_simple": "Preterit",
+		"past_participle": "Past participle"
 	}
 }

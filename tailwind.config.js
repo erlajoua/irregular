@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         primary: '#0095C3', //actual blue
         secondary: '#FE8210', //actual orange
-        valid: '#00C12B',
+        tertiary: "#FFB950",
+        valid: '#00C12B'
       },
     },
   },
