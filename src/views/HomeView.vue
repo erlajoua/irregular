@@ -4,7 +4,6 @@
   import ChangeLanguage from '@/components/ChangeLanguage.vue';
   import TopScore from '@/components/TopScore.vue';
   import { ref } from 'vue';
-import type TopScoreVue from '@/components/TopScore.vue';
   
   const showGame = ref(false);
   const inputs= ref<boolean[]>([]);
