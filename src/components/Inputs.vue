@@ -120,6 +120,7 @@
 			}
 		}
 		else {
+			score.value = 0;
 			clearTimeout(timerId);
 			if (input) {
 				input.value = word;
