@@ -1,37 +1,28 @@
 <script setup lang="ts">
-  import Inputs from '@/components/Inputs.vue';
-  import Locks from '@/components/Locks.vue';
   import ChangeLanguage from '@/components/ChangeLanguage.vue';
-  import TopScore from '@/components/TopScore.vue';
+  import Menu from './Menu.vue'
+  import Game from './Game.vue'
   import { ref } from 'vue';
   
   const showGame = ref(false);
-  const inputs= ref<boolean[]>([]);
+  let inputs= ref<boolean[]>([]);
 
-  const play = (inputsEvent: []) => {
-    inputs.value = inputsEvent;
-    showGame.value = true;
-  }
+
 </script>
 
 <template>
   <div class="w-screen h-screen bg-primary">
     <ChangeLanguage />
-    <TopScore />
     <div class="flex items-center justify-center flex-col gap-4">
-      <Locks
-        v-if="!showGame"
-        @play="play($event)"
+      <Menu v-if="!showGame"
+        v-model:inputs="inputs"
+        v-model:showGame="showGame"
       />
-      <template v-else>
-        <Inputs
-          :inputs="inputs"
-        />
-        <div
-		      class="bg-tertiary shadow rounded-2xl py-2 px-8 cursor-pointer hover:opacity-80"
-          @click="showGame = false"><span class="font-bold text-md">{{ $t('common.back') }}</span>
-        </div>
-      </template>
+      <Game
+        v-else
+        :inputs="inputs"
+        v-model:showGame="showGame"
+      />
     </div>
 
   </div>

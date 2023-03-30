@@ -26,8 +26,8 @@
 		PastParticple
 	}
 
-	const store = useStore()
-	const props = defineProps<{inputs: boolean[]}>()
+	const store = useStore();
+	const props = defineProps<{inputs: boolean[]}>();
 
 	const currentVerb = ref<string>('');
 	const score = ref(0);
