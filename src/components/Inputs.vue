@@ -2,10 +2,10 @@
 	import CustomInput from './CustomInput.vue';
 	import Score from './Score.vue'
 	import Words from './Words.vue';
+	import Lives from './Lives.vue';
 	import { ref } from 'vue';
 	import verbs_fr from '../assets/verbs_fr.json'
 	import { modes } from '../shared/const'
-	import { useI18n } from 'vue-i18n';
 	import { useStore } from '@/shared/store';
 
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
@@ -27,7 +27,7 @@
 	}
 
 	const store = useStore();
-	const props = defineProps<{inputs: boolean[]}>();
+	const props = defineProps<{inputs: boolean[], lives: number}>();
 
 	const currentVerb = ref<string>('');
 	const score = ref(0);
@@ -40,6 +40,8 @@
 		value: undefined,
 		error: false
 	})));
+
+	const emit = defineEmits(['loselife']);
 
 	const setDisabled = () => {
 		inputs.value.forEach((input: Input, index: number) => {
@@ -119,7 +121,10 @@
 			}
 		}
 		else {
-			score.value = 0;
+			if (props.lives === 0)
+				score.value = 0;
+			else
+				emit('loselife');
 			clearTimeout(timerId);
 			if (input) {
 				input.value = word;
@@ -153,7 +158,7 @@
 <template>
 	<div class="flex justify-between items-center w-full">
 		<Score :score="score"/>
-		<span class="mt-2 mr-4 text-secondary">Lives</span>
+		<Lives :lives="lives" />
 	</div>
 	<div class="grid grid-cols-3 grid-rows-2 gap-4">
 		<CustomInput v-for="({selected, disabled, value, error}, index) in inputs" :key="index"
