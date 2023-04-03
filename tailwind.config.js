@@ -14,7 +14,8 @@ module.exports = {
         tertiary: "#FFB950",
         valid: '#00C12B',
         error: "#CB4242",
-        black_input: "rgba(0, 0, 0, 0.31)"
+        black_input: "rgba(0, 0, 0, 0.31)",
+        black_input_no_opacity: "#063659",
       },
     },
   },
