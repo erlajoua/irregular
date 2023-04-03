@@ -25,7 +25,7 @@ const play = (inputsEvent: []) => {
 </script>
 
 <template>
-  <div class="flex justify-between w-full">
+  <div class="flex h-12 pt-4 px-4 justify-between w-full">
     <TopScore />
     <ChangeLanguage />
   </div>

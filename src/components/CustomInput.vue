@@ -29,7 +29,7 @@ const props = defineProps({
 
 <template>
 	<div class="flex flex-col justify-center">
-		<div class="flex gap-1 items-center">
+		<div class="flex gap-1 justify-center items-center">
 			<span class="text-white font-bold text-xs mb-1">{{ label }}</span>
 			<Lock v-if="props.locks && value === $t('common.lock')" class="mb-1" />
 		</div>

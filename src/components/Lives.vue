@@ -13,7 +13,7 @@
 </script>
 
 <template>
-	<div class="mt-2 mr-4 text-secondary flex gap-1 items-center">
+	<div class="text-secondary flex gap-1 items-center">
 		<FilledHeart v-for="(live, index) in lives" :key="index" />
 		<EmptyHeart v-for="index in MAX_LIVES - lives" :key="index" />
 	</div>

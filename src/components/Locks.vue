@@ -18,22 +18,15 @@ const test = (index: number) => {
 </script>
 
 <template>
-	<div class="grid grid-cols-1 xl:grid-cols-3 xl:grid-rows-2 gap-4">
+	<div class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4">
 	<CustomInput v-for="(input, index) in inputs" :key="index" :disabled="input" @click="test(index)"
 		:value="input ? $t('common.lock') : $t('common.unlock')" :label="$t(`modes.${modes[index]}`)"
 		:locks="true"
-		:class="[index === 0 ? 'xl:row-start-1' : 'xl:row-start-2', index !== 0 ? `xl:col-start-${index}` : 'xl:col-start-2']"
+		:class="[index === 0 ? 'lg:row-start-1' : 'lg:row-start-2', index !== 0 ? `lg:col-start-${index}` : 'lg:col-start-2']"
 		/>
 	</div>
 	<div
-		class="bg-tertiary shadow rounded-2xl py-2 px-8 cursor-pointer hover:opacity-80 absolute bottom-8"
+		class="bg-tertiary mb-4 shadow rounded-2xl py-2 px-8 cursor-pointer mt-auto hover:opacity-80 "
 		@click="$emit('play', inputs)"
 	><span class="font-bold text-md">{{ $t('common.play') }}</span></div>
 </template>
-
-<style scoped>
-	.shadow {
-		-webkit-box-shadow: 0px 3px 0px 0px #E1A447; 
-		box-shadow: 0px 3px 0px 0px #E1A447;
-	}
-</style>

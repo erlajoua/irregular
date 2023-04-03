@@ -3,7 +3,7 @@ import { ref, watch } from 'vue';
 import verbs_fr from '../assets/verbs_fr.json';
 import type { Combinaison, mode } from '../shared/interfaces'
 
-const COUNT = 2;
+const COUNT = 15;
 
 const props = defineProps<{ mode: mode, verb: string }>();
 const words = ref<string[]>([]);
@@ -36,8 +36,8 @@ watch(() => [props.verb, props.mode], () => {
 </script>
 
 <template>
-	<div class="flex flex flex-wrap gap-3 w-full justify-center px-4 mt-4">
-		<div v-for="(word, index) in words" :key="index" class="bg-white py-2 px-4 cursor-pointer hover:opacity-80 rounded-md shadow"
+	<div class="flex flex flex-wrap gap-2 md:gap-3 w-full justify-center px-4 mt-4">
+		<div v-for="(word, index) in words" :key="index" class="bg-white py-1 px-2 md:py-2 md:px-4 cursor-pointer hover:opacity-80 rounded-md shadow"
 			@click="$emit('choice', word)"
 		>
 			<span class="font-bold">{{ word }}</span>

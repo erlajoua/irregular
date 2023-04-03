@@ -12,12 +12,12 @@
 </script>
 
 <template>
-  <div class="w-screen h-screen bg-primary flex items-center justify-center">
-    <div class="w-7/12 h-4/6 rounded-2xl bg-primary_2 relative">
+  <div class="w-screen h-screen bg-primary flex pb-12 md:pb-0 md:items-center justify-center">
+    <div class="w-full mt-12 md:mt-0 mx-6 md:mx-0  md:w-8/12 md:h-[80vh] xl:h-2/3 rounded-2xl bg-primary_2 relative">
       <!-- <ChangeLanguage /> -->
       <Icon class="absolute icon" />
       <span class="absolute titleapp font-bold text-white">IRREGULAR</span>
-      <div class="flex items-center justify-center flex-col gap-4">
+      <div class="flex items-center h-full flex-col gap-4">
         <Menu v-if="!showGame"
           v-model:inputs="inputs"
           v-model:showGame="showGame"

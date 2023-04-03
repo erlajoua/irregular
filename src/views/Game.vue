@@ -34,7 +34,7 @@ const checkLoseLife = () => {
 
 <template>
 	<Inputs :inputs="inputs" :lives="lives" @loselife="checkLoseLife()" />
-	<div class="bg-tertiary shadow rounded-2xl mt-auto py-2 px-8 cursor-pointer hover:opacity-80 absolute bottom-8" @click="back()"><span
+	<div class="bg-tertiary shadow rounded-2xl mt-auto mb-4 py-2 px-8 cursor-pointer hover:opacity-80" @click="back()"><span
 			class="font-bold text-md">{{ $t('common.back') }}</span>
 	</div>
 </template>
