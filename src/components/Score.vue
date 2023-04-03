@@ -9,8 +9,8 @@
 </script>
 
 <template>
-	<div>
+	<div class="mt-2 ml-4 flex items-center">
 		<Score />
-		<span class="text-bold text-white text-xl">{{ props.score }}</span>
+		<span class="text-bold text-white text-xl ml-2">{{ props.score }}</span>
 	</div>
 </template>

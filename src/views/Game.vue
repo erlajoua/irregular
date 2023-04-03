@@ -23,7 +23,7 @@ const back = () => {
 
 <template>
 	<Inputs :inputs="inputs" />
-	<div class="bg-tertiary shadow rounded-2xl py-2 px-8 cursor-pointer hover:opacity-80" @click="back()"><span
+	<div class="bg-tertiary shadow rounded-2xl mt-auto py-2 px-8 cursor-pointer hover:opacity-80 absolute bottom-8" @click="back()"><span
 			class="font-bold text-md">{{ $t('common.back') }}</span>
 	</div>
 </template>

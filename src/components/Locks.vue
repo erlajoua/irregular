@@ -26,7 +26,7 @@ const test = (index: number) => {
 		/>
 	</div>
 	<div
-		class="bg-tertiary shadow rounded-2xl py-2 px-8 cursor-pointer hover:opacity-80"
+		class="bg-tertiary shadow rounded-2xl py-2 px-8 cursor-pointer hover:opacity-80 absolute bottom-8"
 		@click="$emit('play', inputs)"
 	><span class="font-bold text-md">{{ $t('common.play') }}</span></div>
 </template>

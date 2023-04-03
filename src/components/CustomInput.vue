@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+import Lock from '../icons/Lock.vue'
+
 defineEmits(['click']);
 
 const props = defineProps({
@@ -27,7 +29,10 @@ const props = defineProps({
 
 <template>
 	<div class="flex flex-col justify-center">
-		<span class="text-white font-bold text-xs mb-1">{{ label }}</span>
+		<div class="flex gap-1 items-center">
+			<span class="text-white font-bold text-xs mb-1">{{ label }}</span>
+			<Lock v-if="props.locks && value === $t('common.lock')" class="mb-1" />
+		</div>
 		<div
 			class="text-white bg-black_input w-[200px] font-bold h-[40px] rounded-lg border-solid outline-none p-6 text-center flex items-center justify-center"
 			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' && !error ? 'border-2 border-valid' : '', props.locks ? 'cursor-pointer hover:opacity-80': '', value !== '' && error ? 'border-2 border-error' : '', props.locks ? value === $t('common.unlock') ? 'font-normal border-2 border-secondary' : '' : '']"

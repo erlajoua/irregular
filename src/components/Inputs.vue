@@ -151,14 +151,20 @@
 </script>
 
 <template>
-	<Score :score="score" />
-	<CustomInput v-for="({selected, disabled, value, error}, index) in inputs" :key="index"
-		:selected="selected"
-		:disabled="disabled"
-		:value="value"
-		:label="$t(`modes.${modes[index]}`)"
-		:error="error"
-	/>
+	<div class="flex justify-between items-center w-full">
+		<Score :score="score"/>
+		<span class="mt-2 mr-4 text-secondary">Lives</span>
+	</div>
+	<div class="grid grid-cols-3 grid-rows-2 gap-4">
+		<CustomInput v-for="({selected, disabled, value, error}, index) in inputs" :key="index"
+			:selected="selected"
+			:disabled="disabled"
+			:value="value"
+			:label="$t(`modes.${modes[index]}`)"
+			:error="error"
+			:class="[index === 0 ? 'row-start-1' : 'row-start-2', index !== 0 ? `col-start-${index}` : 'col-start-2']"
+		/>
+	</div>
 	<Words
 		:mode="mode"
 		:verb="currentVerb"
