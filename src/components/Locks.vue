@@ -18,11 +18,11 @@ const test = (index: number) => {
 </script>
 
 <template>
-	<div class="grid grid-cols-3 grid-rows-2 gap-4">
+	<div class="grid grid-cols-1 xl:grid-cols-3 xl:grid-rows-2 gap-4">
 	<CustomInput v-for="(input, index) in inputs" :key="index" :disabled="input" @click="test(index)"
 		:value="input ? $t('common.lock') : $t('common.unlock')" :label="$t(`modes.${modes[index]}`)"
 		:locks="true"
-		:class="[index === 0 ? 'row-start-1' : 'row-start-2', index !== 0 ? `col-start-${index}` : 'col-start-2']"
+		:class="[index === 0 ? 'xl:row-start-1' : 'xl:row-start-2', index !== 0 ? `xl:col-start-${index}` : 'xl:col-start-2']"
 		/>
 	</div>
 	<div

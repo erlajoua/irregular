@@ -36,7 +36,7 @@ watch(() => [props.verb, props.mode], () => {
 </script>
 
 <template>
-	<div class="flex flex flex-wrap gap-3 w-2/5 mt-4">
+	<div class="flex flex flex-wrap gap-3 w-full justify-center px-4 mt-4">
 		<div v-for="(word, index) in words" :key="index" class="bg-white py-2 px-4 cursor-pointer hover:opacity-80 rounded-md shadow"
 			@click="$emit('choice', word)"
 		>
