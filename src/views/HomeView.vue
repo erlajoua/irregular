@@ -11,20 +11,21 @@
 </script>
 
 <template>
-  <div class="w-screen h-screen bg-primary">
-    <ChangeLanguage />
-    <div class="flex items-center justify-center flex-col gap-4">
-      <Menu v-if="!showGame"
-        v-model:inputs="inputs"
-        v-model:showGame="showGame"
-      />
-      <Game
-        v-else
-        :inputs="inputs"
-        v-model:showGame="showGame"
-      />
+  <div class="w-screen h-screen bg-primary flex items-center justify-center">
+    <div class="w-7/12 h-4/6 rounded-2xl bg-primary_2">
+      <!-- <ChangeLanguage /> -->
+      <div class="flex items-center justify-center flex-col gap-4">
+        <Menu v-if="!showGame"
+          v-model:inputs="inputs"
+          v-model:showGame="showGame"
+        />
+        <Game
+          v-else
+          :inputs="inputs"
+          v-model:showGame="showGame"
+        />
+      </div>
     </div>
-
   </div>
 </template>
 

@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { useStore } from '../shared/store'
+import TopScore from '../icons/TopScore.vue'
 
 const store = useStore()
 </script>
 
 <template>
-	<div v-if="store.topScore !== -1">
-	  <span class="text-bold text-white text-lg"> {{$t('common.topScore')}} : {{ store.topScore }}</span>
+	<div class="ml-4 mt-2 flex items-center">
+		<TopScore />
+		<span class="ml-2 text-bold text-white text-lg"> {{ store.topScore }}</span>
 	</div>
-  </template>
+</template>

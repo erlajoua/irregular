@@ -29,22 +29,22 @@ const props = defineProps({
 	<div class="flex flex-col justify-center">
 		<span class="text-white font-bold text-xs mb-1">{{ label }}</span>
 		<div
-			class="bg-white w-[200px] h-[40px] rounded-lg border-solid outline-none p-6 text-center flex items-center justify-center"
-			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' && !error ? 'border-2 border-valid' : '', props.locks ? 'cursor-pointer hover:opacity-80': '', value !== '' && error ? 'border-2 border-error' : '']"
+			class="text-white bg-black_input w-[200px] font-bold h-[40px] rounded-lg border-solid outline-none p-6 text-center flex items-center justify-center"
+			:class="[selected && value === '' && !disabled ? 'border-2 border-secondary' : 'border-0', disabled ? 'disabled' : '', selected && value !== '' && !error ? 'border-2 border-valid' : '', props.locks ? 'cursor-pointer hover:opacity-80': '', value !== '' && error ? 'border-2 border-error' : '', props.locks ? value === $t('common.unlock') ? 'font-normal border-2 border-secondary' : '' : '']"
 			@click="$emit('click')"
 		>
-			<span v-if="value !== ''" class="font-bold"
+			<span v-if="value !== ''"
 				:class="selected && value !== '' && !error ? 'text-valid' : error === true && value !== '' ? 'text-error': ''"
 			>{{ value }}</span>
-			<span v-else-if="selected && value === ''" class="text-secondary">Select the answer</span>
+			<span v-else-if="selected && value === ''" class="text-secondary font-medium">Select the answer</span>
 		</div>
 	</div>
 </template>
 
 <style scoped>
 	.disabled {
-		background-color: #ffffff;
-		opacity: 1;
-		background: repeating-linear-gradient( -45deg, #eaeaea, #eaeaea 3.5px, #ffffff 3.5px, #ffffff 17.5px );
+		background-color: #03375A;
+opacity: 1;
+background: repeating-linear-gradient( -45deg, #073656, #073656 3.5px, #03375A 3.5px, #03375A 17.5px );
 	}
 </style>

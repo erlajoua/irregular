@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Locks from '@/components/Locks.vue';
 import TopScore from '@/components/TopScore.vue';
+import ChangeLanguage from '@/components/ChangeLanguage.vue';
 import type { PropType } from 'vue';
 
 
@@ -24,6 +25,9 @@ const play = (inputsEvent: []) => {
 </script>
 
 <template>
-  <TopScore />
+  <div class="flex justify-between w-full">
+    <TopScore />
+    <ChangeLanguage />
+  </div>
   <Locks @play="play($event)" />
 </template>
