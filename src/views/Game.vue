@@ -45,7 +45,9 @@ const reset = () => {
 		</div>
 	</template>
 	<div v-else class="flex flex-col h-full items-center justify-center gap-2">
-		<span class="text-white font-bold">You lost</span>
+		<span class="font-bold text-lg">Page pas encore faite</span>
+		<span class="font-bold text-lg">Mais récapitulatif (score, fautes) etc</span>
+		<span class="text-white font-bold">{{ $t('common.lost') }}</span>
 		<div class="flex gap-2">
 			<div class="bg-tertiary shadow rounded-2xl mt-auto mb-4 py-2 px-4 cursor-pointer hover:opacity-80" @click="reset()"><span
 					class="font-bold text-md">{{ $t('common.tryagain') }}</span>

@@ -8,7 +8,8 @@
 		"back": "Retour",
 		"play": "Jouer",
 		"topScore": "Meilleur score",
-		"tryagain": "Rejouer"
+		"tryagain": "Rejouer",
+		"lost": "Tu as perdu"
 	},
 	"modes": {
 		"translate": "Traduction",
