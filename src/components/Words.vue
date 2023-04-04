@@ -26,7 +26,7 @@ const getWords = ((mode: mode, verb: string) => {
 	if (mode === 'base')
 		words.value = randomVerbs;
 	else
-		words.value = randomVerbs.map(verb => (verbs_fr as Combinaison)[verb][mode]);
+		words.value = randomVerbs.map(verb => (verbs_fr as any)[verb][mode]);
 })
 
 watch(() => [props.verb, props.mode], () => {
@@ -37,7 +37,7 @@ watch(() => [props.verb, props.mode], () => {
 
 <template>
 	<div class="flex flex flex-wrap gap-2 md:gap-3 w-full justify-center px-4 mt-4">
-		<div v-for="(word, index) in words" :key="index" class="bg-white py-1 px-2 md:py-2 md:px-4 cursor-pointer hover:opacity-80 rounded-md shadow"
+		<div v-if="mode !== ''" v-for="(word, index) in words" :key="index" class="bg-white py-1 px-2 md:py-2 md:px-4 cursor-pointer hover:opacity-80 rounded-md shadow"
 			@click="$emit('choice', word)"
 		>
 			<span class="font-bold">{{ word }}</span>

@@ -14,4 +14,4 @@ interface SubCombinaison {
 	past_participle: string;
 }
 
-type mode = 'base' | 'translate' | 'past_simple' | 'past_participle';
+type mode = 'base' | 'translate' | 'past_simple' | 'past_participle' | '';

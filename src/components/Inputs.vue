@@ -11,7 +11,6 @@
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
 	const TIMER_ERROR = 1500;
-	const TIMER_VALID = 1000;
 
 	interface Input {
 		selected: boolean,
@@ -88,8 +87,9 @@
 			mode.value = 'translate';
 		else if (index === Modes.PastSimple)
 			mode.value = 'past_simple';
-		else	
+		else if (index === Modes.PastParticple)
 			mode.value = 'past_participle'
+		else mode.value = '';
 	}
 
 	const init = () => {
@@ -117,10 +117,8 @@
 			if (input) {
 				input.error = false;
 				input.value = word;
-				timerId = setTimeout(() => {
-					setSelected();
-					getMode();
-				}, TIMER_VALID)
+				setSelected();
+				getMode();
 			}
 		}
 		else {
@@ -141,17 +139,19 @@
 			}
 		}
 		if (inputs.value.every(input => input.value !== '' && !input.error)) {
-			inputs.value.forEach(input => {
-				input.selected = false;
-			})
-			currentVerb.value = getNewVerb();
-			setValues();
-			setSelected();
-			getMode();
-			score.value++;
-			if (score.value > store.topScore) {
-				store.updateTopScore(score.value);
-			}
+			setTimeout(() => {
+				inputs.value.forEach(input => {
+					input.selected = false;
+				})
+				currentVerb.value = getNewVerb();
+				setValues();
+				setSelected();
+				getMode();
+				score.value++;
+				if (score.value > store.topScore) {
+					store.updateTopScore(score.value);
+				}
+			}, 1200)
 		}
 	}
 
