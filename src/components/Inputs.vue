@@ -11,6 +11,7 @@
 	import type { Combinaison, SubCombinaison, mode } from '../shared/interfaces'
 
 	const TIMER_ERROR = 1500;
+	const TIMER_VALID = 1000;
 
 	interface Input {
 		selected: boolean,
@@ -116,8 +117,10 @@
 			if (input) {
 				input.error = false;
 				input.value = word;
-				setSelected();
-				getMode();
+				timerId = setTimeout(() => {
+					setSelected();
+					getMode();
+				}, TIMER_VALID)
 			}
 		}
 		else {
