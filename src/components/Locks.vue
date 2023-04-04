@@ -12,8 +12,6 @@ const test = (index: number) => {
 	if ((locks.length > 1 && inputs.value[index] === true)
 		|| (locks.length < 3 && inputs.value[index] === false))
 		inputs.value[index] = !inputs.value[index];
-	else
-		alert("dumb!");
 }
 </script>
 

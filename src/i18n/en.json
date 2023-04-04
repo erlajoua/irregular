@@ -7,7 +7,8 @@
 		"unlock": "Unlocked",
 		"back": "Back",
 		"play": "Play",
-		"topScore": "Top score"
+		"topScore": "Top score",
+		"tryagain": "Try again"
 	},
 	"modes": {
 		"translate": "Translation",

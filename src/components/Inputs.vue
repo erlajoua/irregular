@@ -137,7 +137,7 @@
 				}, TIMER_ERROR);
 			}
 		}
-		if (inputs.value.every(input => input.value !== '')) {
+		if (inputs.value.every(input => input.value !== '' && !input.error)) {
 			inputs.value.forEach(input => {
 				input.selected = false;
 			})

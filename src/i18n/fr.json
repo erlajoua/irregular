@@ -7,7 +7,8 @@
 		"unlock": "Dévérouillé",
 		"back": "Retour",
 		"play": "Jouer",
-		"topScore": "Meilleur score"
+		"topScore": "Meilleur score",
+		"tryagain": "Rejouer"
 	},
 	"modes": {
 		"translate": "Traduction",

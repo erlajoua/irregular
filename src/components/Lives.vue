@@ -14,7 +14,7 @@
 
 <template>
 	<div class="text-secondary flex gap-1 items-center">
-		<FilledHeart v-for="(live, index) in lives" :key="index" />
+		<FilledHeart v-for="(_, index) in lives" :key="index" />
 		<EmptyHeart v-for="index in MAX_LIVES - lives" :key="index" />
 	</div>
 </template>
