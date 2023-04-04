@@ -89,7 +89,8 @@
 			mode.value = 'past_simple';
 		else if (index === Modes.PastParticple)
 			mode.value = 'past_participle'
-		else mode.value = '';
+		else
+			mode.value = '';
 	}
 
 	const init = () => {
@@ -151,7 +152,7 @@
 				if (score.value > store.topScore) {
 					store.updateTopScore(score.value);
 				}
-			}, 1200)
+			}, 1000)
 		}
 	}
 
