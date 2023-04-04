@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import verbs_fr from '../assets/verbs_fr.json';
-import type { Combinaison, mode } from '../shared/interfaces'
+import type { mode } from '../shared/interfaces'
 
-const COUNT = 15;
+const COUNT = 12;
 
 const props = defineProps<{ mode: mode, verb: string }>();
 const words = ref<string[]>([]);
